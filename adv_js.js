@@ -273,3 +273,8 @@ console.log(resultSlice);
 const arraySplice=[2,3,5,6,9,7];
 const resultSplice=arraySplice.splice(2,4); //2 no index theke start then 2no=5 then count 5=1,6=2,9=3,7=4
 console.log(resultSplice);
+
+//join
+const arr=[5,8,6,4];
+const resultjoin=arr.join("*");
+console.log(resultjoin);
