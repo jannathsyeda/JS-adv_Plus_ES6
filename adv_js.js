@@ -195,10 +195,81 @@ const Student=[
 console.log('---filter--');
     const ArrayFilterId=Student.filter(s=>s.id>2);
     console.log(ArrayFilterId);
+    //find (only give the first matching element)
+    console.log('---find--');
+
+    const ArrayFindOneItem=Student.find(s=>s.id>2);
+    console.log(ArrayFindOneItem);
+
+    //Scope, block scope, access outer scope variable
+
+    console.log('---Scope, block scope, access outer scope variable--');
+    //scop -only bracket er vetor ,if block ,for block e kaj korbe, example-let,const ,ar gloval holey sob place e kaj korbe
+  
+    //hoisting 
+    //kuno ekti variavle declare korley tar scope  uporer level e nia jawa ke hoisting boley,hosting kore sudu declaration variable ke upore utabe variable er value ke utabe na
+
+//thatjsdude.com visit fr scope article
+
+let bonus = 20;
+
+function sum(first, second){
+    let result = first + second + bonus;
+    //console.log(bonus);
+    if(result > 9){
+        var Mymood = "happy";
+        Mymood = "sad";
+        Mymood = 'none';
+        Mymood = "nothing"
+        //console.log(Mymood);
+    }
+    // console.log(day);
+    let day = "friday";
+    console.log(day);
+
+    return result;
+}
+
+const output = sum(3, 7);
+//console.log(bonus);
+//console.log(output);
 
 
 
+//closure
+// kuno ekta function thekey jodi kuno ekta function ke call kori ohoba return kori,taholey she ekta closed environment make kore pele,j function ke return kore she jodi tar bairer kuno variable ke access kore,thokon sheta ke use korba,thokon shei function ta i mean clock ta tar nijoshsho ekta value rakbe,clock2 abr tar nijoshoso ekta value rakbe,clock3 declare kore she tar nijosho arekta value rakbe,nejo tara nijeder moddey ekta close environment make kore felse.
+// or 
+// jodi ekta function er vetor arekta function ke return kore and both ekta external variable ke refferance reke Delay tobe takey clouser boley
+
+function stopeWatch(){
+    let count=0;
+    return function(){
+        count ++;
+        return count;
+    }
+
+}
+
+const clock1 = stopeWatch();
+console.log(clock1());
+console.log(clock1());
+
+const clock2 = stopeWatch();
+console.log(clock2());
+console.log(clock2());
+
+//clouser
+//when u create an internal scope but can't access from outside,call a function inside a function or return a function from another
 
 
 
+// Array , splice, array join elements
+//slice
+const arraySlice=[2,3,5,6,9,7];
+const resultSlice=arraySlice.slice(1,3);//1index=3 start then 2index=5
+console.log(resultSlice);
 
+//splice
+const arraySplice=[2,3,5,6,9,7];
+const resultSplice=arraySplice.splice(2,4); //2 no index theke start then 2no=5 then count 5=1,6=2,9=3,7=4
+console.log(resultSplice);
