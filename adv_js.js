@@ -237,11 +237,12 @@ const output = sum(3, 7);
 
 
 //closure
+// ekti inner function jodi tar outer function er property Or methods ke access korte pare taile ei concept kei closure bole.
 // kuno ekta function thekey jodi kuno ekta function ke call kori ohoba return kori,taholey she ekta closed environment make kore pele,j function ke return kore she jodi tar bairer kuno variable ke access kore,thokon sheta ke use korba,thokon shei function ta i mean clock ta tar nijoshsho ekta value rakbe,clock2 abr tar nijoshoso ekta value rakbe,clock3 declare kore she tar nijosho arekta value rakbe,nejo tara nijeder moddey ekta close environment make kore felse.
 // or 
 // jodi ekta function er vetor arekta function ke return kore and both ekta external variable ke refferance reke Delay tobe takey clouser boley
-
-function stopeWatch(){
+console.log("---closure---");
+function stopWatch(){
     let count=0;
     return function(){
         count ++;
@@ -250,11 +251,11 @@ function stopeWatch(){
 
 }
 
-const clock1 = stopeWatch();
+const clock1 = stopWatch();
 console.log(clock1());
 console.log(clock1());
 
-const clock2 = stopeWatch();
+const clock2 = stopWatch();
 console.log(clock2());
 console.log(clock2());
 
@@ -297,3 +298,24 @@ for(let i = 0; i < nums.length; i++){
     }
     console.log(nums[i]);
 }
+
+
+console.log("Settimeout")
+//aynchronously kaj kore. last current value print dibe and kuno wait korbe na,
+var i=0;
+for(i=0; i<3; i++){
+    setTimeout(()=>{
+        console.log(i);
+    },3000)
+
+    // console.log(i);
+}
+
+
+console.log("Jannath 1");
+setTimeout(()=>{
+         console.log("Jannath 2");
+},1000)
+console.log("Jannath 3");
+console.log("Jannath 4");
+console.log("Jannath 5");
