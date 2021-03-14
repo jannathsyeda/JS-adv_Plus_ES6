@@ -104,11 +104,11 @@ const first1 = 0;
 const second2 = false;
 
 if(first1 === second2){
-    console.log("equal");
+    console.log("tripule ==== equal");
 }
 else
 {
-    console.log("not");
+    console.log("when 0 === false (not equal)");
 }
 
 
@@ -129,7 +129,7 @@ const resultMap=numbers.map(function(element){
 console.log(resultMap);
 console.log('----');
 
-
+ 
 //map plus arrow
 console.log('---map plus arrow---')
 digit=[2,4,2,1,6,4];
